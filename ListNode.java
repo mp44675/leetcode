@@ -31,6 +31,9 @@ class Solution {
                     temp.next = new_node;
                     temp = sol;
                 } else if (lists_temp.val > temp.val) {
+                    if (lists_temp.val < temp.val) {
+                        //insert here
+                    }
                     temp = temp.next;
                 } 
                 lists_temp = lists_temp.next;
