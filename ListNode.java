@@ -1,3 +1,6 @@
+import java.util.PriorityQueue;
+import java.util.Queue;
+
 public class ListNode {
     int val;
     ListNode next;
@@ -17,28 +20,30 @@ public class ListNode {
 
 class Solution {
     public ListNode mergeKLists(ListNode[] lists) {
-        ListNode sol = new ListNode();
-        int inc = 0;
-        sol = lists[0];             // sol is now the first list
-        for (int i = 1; i < lists.length; i++) {
-            ListNode temp = sol;
-            ListNode lists_temp = lists[i];
-            while (temp.next != null) {
-                if (lists_temp.val == temp.val) {
-                    //same value so put it next to each other
-                    ListNode new_node = new ListNode(lists_temp.val);
-                    new_node.next = temp.next;
-                    temp.next = new_node;
-                    temp = sol;
-                } else if (lists_temp.val > temp.val) {
-                    if (lists_temp.val < temp.val) {
-                        //insert here
-                    }
-                    temp = temp.next;
-                } 
-                lists_temp = lists_temp.next;
+        if (lists.length == 0) {
+            return null;
+        }
+        ListNode sol = null;
+        ListNode temp = null;
+        Queue<ListNode> heap = new PriorityQueue<>((head1,head2)->head1.val-head2.val);
+        for (ListNode l : lists) {
+            if (l != null) {
+                heap.offer(l);
             }
         }
+        while (!heap.isEmpty()) {
+            ListNode curr = heap.poll();
+            if (curr.next != null) {
+                heap.offer(curr.next);
+            }
+            if (sol == null) {
+                sol = new ListNode(temp.val);
+                temp = sol;
+            } else{
+                temp.next = new ListNode(temp.val);
+            }
+        }
+        System.out.println();
         return sol;
     }
     //moves the list one node to the right @ n
