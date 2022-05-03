@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch MaxProd",
+            "request": "launch",
+            "mainClass": "MaxProd",
+            "projectName": "code_712dba27"
+        },
+        {
+            "type": "java",
+            "name": "Launch ListNode",
+            "request": "launch",
+            "mainClass": "ListNode",
+            "projectName": "code_712dba27"
+        },
+        {
+            "type": "java",
             "name": "Launch ListNode",
             "request": "launch",
             "mainClass": "ListNode",
