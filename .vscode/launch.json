@@ -6,17 +6,6 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Launch SpiralOrder",
-            "request": "launch",
-            "mainClass": "SpiralOrder",
-            "projectName": "leetcode_4a9497ad"
-        },
-        {
-            "type": "java",
-            "name": "Launch median",
-            "request": "launch",
-            "mainClass": "median",
-            "projectName": "leetcode_4a9497ad"
         },
         {
             "type": "java",
