@@ -6,17 +6,6 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Launch Google",
-            "request": "launch",
-            "mainClass": "Google",
-            "projectName": "code_712dba27"
-        },
-        {
-            "type": "java",
-            "name": "Launch MergeIntervals",
-            "request": "launch",
-            "mainClass": "MergeIntervals",
-            "projectName": "code_712dba27"
         },
         {
             "type": "java",
